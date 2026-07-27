@@ -56,7 +56,9 @@
     "migration:revert:main": "npm run typeorm -- migration:revert -d src/database/data-source-main.ts",
     "migration:revert:main:prod": "npm run typeorm:prod -- migration:revert -d dist/database/data-source-main.js",
     "migration:show:main": "npm run typeorm -- migration:show -d src/database/data-source-main.ts",
-    "migration:show:main:prod": "npm run typeorm:prod -- migration:show -d dist/database/data-source-main.js"
+    "migration:show:main:prod": "npm run typeorm:prod -- migration:show -d dist/database/data-source-main.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",
@@ -125,7 +127,8 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "~6.0.3",
-    "typescript-eslint": "^8.65.0"
+    "typescript-eslint": "^8.65.0",
+    "wrangler": "^4.114.0"
   },
   "jest": {
     "moduleFileExtensions": [
